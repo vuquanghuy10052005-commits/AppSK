@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.AppSK" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="materialButtonStyle">@style/Widget.AppSK.Button</item>
+    </style>
+
+    <style name="Widget.AppSK.Button" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <!-- Màn hình khởi động: nền xanh, logo trái tim -->
+    <style name="Theme.AppSK.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/primary</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_icon_hinh</item>
+        <item name="postSplashScreenTheme">@style/Theme.AppSK</item>
+    </style>
+
+</resources>

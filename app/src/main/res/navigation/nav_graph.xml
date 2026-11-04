@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_trang_chu">
+
+    <fragment
+        android:id="@+id/nav_trang_chu"
+        android:name="com.example.appsk.ui.trangchu.TrangChuFragment"
+        android:label="@string/tab_home"
+        tools:layout="@layout/fragment_trang_chu" />
+
+    <fragment
+        android:id="@+id/nav_van_dong"
+        android:name="com.example.appsk.ui.vandong.VanDongFragment"
+        android:label="@string/tab_activity"
+        tools:layout="@layout/fragment_van_dong" />
+
+    <fragment
+        android:id="@+id/nav_dinh_duong"
+        android:name="com.example.appsk.ui.dinhduong.DinhDuongFragment"
+        android:label="@string/tab_nutrition"
+        tools:layout="@layout/fragment_dinh_duong" />
+
+    <fragment
+        android:id="@+id/nav_thong_ke"
+        android:name="com.example.appsk.ui.thongke.ThongKeFragment"
+        android:label="@string/tab_stats"
+        tools:layout="@layout/fragment_thong_ke" />
+
+    <fragment
+        android:id="@+id/nav_ho_so"
+        android:name="com.example.appsk.ui.hoso.HoSoFragment"
+        android:label="@string/tab_profile"
+        tools:layout="@layout/fragment_ho_so" />
+
+</navigation>

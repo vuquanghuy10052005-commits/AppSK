@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/khung_thong_tin" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/khung_thong_tin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/nhom_loai_hoat_dong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:checkedButton="@id/btn_loai_chay_bo"
+            app:selectionRequired="true"
+            app:singleSelection="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_loai_di_bo"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bt_loai_di_bo" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_loai_chay_bo"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bt_loai_chay_bo" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_loai_dap_xe"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bt_loai_dap_xe" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_giua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/tv_nhan_quang_duong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/bt_quang_duong"
+            android:textColor="@color/text_secondary"
+            app:layout_constraintTop_toBottomOf="@id/nhom_loai_hoat_dong"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_gia_tri_quang_duong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00 km"
+            android:textColor="@color/primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_nhan_quang_duong"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nhan_thoi_gian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/bt_thoi_gian"
+            android:textColor="@color/text_secondary"
+            app:layout_constraintTop_toBottomOf="@id/nhom_loai_hoat_dong"
+            app:layout_constraintStart_toStartOf="@id/guideline_giua" />
+
+        <TextView
+            android:id="@+id/tv_gia_tri_thoi_gian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_nhan_thoi_gian"
+            app:layout_constraintStart_toStartOf="@id/guideline_giua" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_duoi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tv_gia_tri_quang_duong,tv_gia_tri_thoi_gian" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_bat_dau_dung"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/btn_bat_dau"
+            app:layout_constraintTop_toBottomOf="@id/barrier_duoi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_lich_su"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_btn_lich_su"
+            app:layout_constraintTop_toBottomOf="@id/btn_bat_dau_dung"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

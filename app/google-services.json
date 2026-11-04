@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "689038377457",
+    "project_id": "appsk-c0d7f",
+    "storage_bucket": "appsk-c0d7f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689038377457:android:085782afe9c7fe89bb8450",
+        "android_client_info": {
+          "package_name": "com.example.appsk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNM0rzARVwlmKFHhSDzJmEY9837pGoXCk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

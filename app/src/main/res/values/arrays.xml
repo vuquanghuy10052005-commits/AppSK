@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mang_gioi_tinh">
+        <item>Nam</item>
+        <item>Nữ</item>
+    </string-array>
+
+    <string-array name="mang_muc_do_hoat_dong">
+        <item>Ít vận động (ít hoặc không tập)</item>
+        <item>Vận động nhẹ (1-3 buổi/tuần)</item>
+        <item>Vận động vừa (3-5 buổi/tuần)</item>
+        <item>Vận động nhiều (6-7 buổi/tuần)</item>
+        <item>Vận động rất nhiều (cường độ cao, lao động chân tay)</item>
+    </string-array>
+
+    <string-array name="mang_muc_tieu">
+        <item>Giảm cân</item>
+        <item>Duy trì cân nặng</item>
+        <item>Tăng cân / Tăng cơ</item>
+    </string-array>
+
+    <string-array name="mang_loai_bua">
+        <item>Sáng</item>
+        <item>Trưa</item>
+        <item>Tối</item>
+        <item>Phụ</item>
+    </string-array>
+</resources>

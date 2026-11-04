@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Chọn ngày -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_ngay_truoc"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/dd_ngay_truoc"
+                android:minWidth="48dp"
+                android:padding="0dp"
+                android:text="‹"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/tv_ngay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/primary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_ngay_sau"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/dd_ngay_sau"
+                android:minWidth="48dp"
+                android:padding="0dp"
+                android:text="›"
+                android:textSize="26sp" />
+
+        </LinearLayout>
+
+        <!-- Calo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/nhan_tong_calo"
+            android:textColor="@color/text_secondary" />
+
+        <TextView
+            android:id="@+id/tv_gia_tri_calo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 kcal"
+            android:textColor="@color/primary"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progress_calo"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_marginTop="6dp"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/tv_chi_tiet_calo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:lineSpacingExtra="2dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <!-- Nước -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/nhan_tong_nuoc"
+            android:textColor="@color/text_secondary" />
+
+        <TextView
+            android:id="@+id/tv_gia_tri_nuoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 ml"
+            android:textColor="@color/accent"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progress_nuoc"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_marginTop="6dp"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/tv_chi_tiet_nuoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_them_nuoc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_them_nuoc" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_hoan_tac_nuoc"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:text="@string/dd_btn_hoan_tac_nuoc" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_them_bua_an"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/btn_them_bua_an" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_bieu_do"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dd_btn_bieu_do" />
+
+        <!-- Danh sách bữa ăn -->
+        <TextView
+            android:id="@+id/tv_danh_sach_trong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/dd_danh_sach_trong"
+            android:textColor="@color/text_secondary"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progress_thay_mon"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_goi_y_cham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/td_goi_y_cham"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_danh_sach_bua_an"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

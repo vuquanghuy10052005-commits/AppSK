@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_trang_chu"
+        android:icon="@drawable/ic_nav_trang_chu"
+        android:title="@string/tab_home" />
+    <item
+        android:id="@+id/nav_van_dong"
+        android:icon="@drawable/ic_nav_van_dong"
+        android:title="@string/tab_activity" />
+    <item
+        android:id="@+id/nav_dinh_duong"
+        android:icon="@drawable/ic_nav_dinh_duong"
+        android:title="@string/tab_nutrition" />
+    <item
+        android:id="@+id/nav_thong_ke"
+        android:icon="@drawable/ic_nav_thong_ke"
+        android:title="@string/tab_stats" />
+    <item
+        android:id="@+id/nav_ho_so"
+        android:icon="@drawable/ic_nav_ho_so"
+        android:title="@string/tab_profile" />
+</menu>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name=".UngDungSucKhoe"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppSK"
+        android:usesCleartextTraffic="false">
+
+        <activity
+            android:name=".DangNhapActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppSK.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".DangKyActivity" android:exported="false" />
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".ChayBoActivity" android:exported="false" />
+        <activity android:name=".ui.caidat.CaiDatActivity" android:exported="false" />
+        <activity android:name=".ui.lichsu.LichSuBuoiTapActivity" android:exported="false" />
+        <activity android:name=".ui.lichsu.ChiTietBuoiTapActivity" android:exported="false" />
+        <activity android:name=".ui.dinhduong.BieuDoDinhDuongActivity" android:exported="false" />
+        <activity android:name=".ui.trolyai.TroLyAiActivity" android:exported="false" />
+        <activity android:name=".ui.phantich.PhanTichAiActivity" android:exported="false" />
+        <activity android:name=".ui.kehoach.KeHoachAiActivity" android:exported="false" />
+        <activity android:name=".ui.thoitiet.ThoiTietActivity" android:exported="false" />
+        <activity android:name=".ui.canhbao.CanhBaoSucKhoeActivity" android:exported="false" />
+        <activity
+            android:name=".ui.anhmonan.PhanTichAnhActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".TheoDoiChayBoService"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+        <!-- Cho phép ứng dụng máy ảnh ghi ảnh vào một tệp tạm của app -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>
